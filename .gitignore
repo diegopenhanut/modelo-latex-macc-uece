@@ -1,3 +1,7 @@
 modelo-monografia.pdf
 *.kilepr
+*.pdf
+*.sh
+*.log
+*.backup
 *~
