@@ -105,6 +105,15 @@
 	 \ABNTpcquatrodata. \ABNTpccincodata. \ABNTpcseisdata
 }
 
+\newcommand{\dedicatoria}{
+    \vspace*{20cm}
+    \hspace{.3\textwidth}
+    \begin{minipage}{.6\textwidth}
+        \par
+        \textit{\DedicatoriaData}
+    \end{minipage}
+    \pagebreak
+}
 
 \renewcommand{\capa}{
 	\begin{center}
@@ -508,7 +517,8 @@
 
 \newcommand{\comentariosimplificado}[1]{\newcommand{\ABNTcomentariosimplificadodata}{#1}}
 
-\def\termodeaprovacao{
+\def \termodeaprovacao%
+{
 	\espaco{1.1}
 
 	\begin{center}
@@ -566,7 +576,8 @@
 }
 
 
-\def\makeepigrafe{
+\def \makeepigrafe%
+{
 	\vspace*{20cm}
 	\hspace{.5\textwidth}
 	\begin{minipage}{.4\textwidth}
