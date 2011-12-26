@@ -4,7 +4,11 @@ Modelo de dissertação em LaTeX da Universidade Estadual do Ceara (UECE)
 - Baseado no modelo desenvolvido por Rudy Matela (http://www.larces.uece.br/~rudy/pub/modelo_monografia/)
 - Fork do repositório disponível em https://github.com/qrwteyrutiyoup/modelo-latex-uece
 
-* Versao 0.1 - 15 de dezembro de 2011
+* Versão 0.2 - 26 de dezembro de 2011
+  - Trocado pacote nomencl por pacote glossaries para glossário e lista de símbolos
+  - Atualizado Makefile (agora lista de siglas é gerada por padrão)
+
+* Versão 0.1 - 15 de dezembro de 2011
   - Atualizadas menções para mestrado
   - Adicionado campo Dedicatória
 
