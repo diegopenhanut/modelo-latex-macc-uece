@@ -223,7 +223,7 @@
 
 	\hspace{0.5cm}
 	\small Monografia (\ABNTcursodata) - \ABNTinstituicaodata, \ABNTcentrodata.
-   
+
 	\hspace{0.5cm}
 	$1$. \ABNTpcumdata\ $2$. \ABNTpcdoisdata\ $3$. \ABNTpctresdata\ $4$.
 	\ABNTpcquatrodata\ $5$. \ABNTpccincodata\ I.
@@ -272,7 +272,7 @@
 %Altera o espaçamento entre dots
 \renewcommand\@dotsep{2}
 % \setlength{\headsep}{\headsep + 1.0cm}
-% 
+%
 % \setlength{\footskip}{2cm}
 % \setlength{\topmargin}{2cm-1in-\voffset}
 % % \setlength{\headheight}{0cm}
@@ -300,7 +300,7 @@
       \MakeUppercase{#1}\nobreak\normalfont\dotfill\nobreak%
       \ifthenelse{\boolean{ABNTpagenumstyle}}
          {%
-          \hb@xt@\@pnumwidth{\hss 
+          \hb@xt@\@pnumwidth{\hss
             \ifthenelse{\not\equal{#2}{}}{{\normalfont p.\thinspace#2}}{}}\par
          }
          {%
@@ -340,16 +340,16 @@
             {\anapchaptername}
           \thechapter \ABNTaposindicativoanap}
          {\ifthenelse{\boolean{ABNTCapAnnexAppendix}}
-            {\MakeUppercase{\anapchaptername}}                                                                                                                     
-            {\anapchaptername}                                                                                                                                     
-          \thechapter{} \ABNTtravessao{} \ABNTaposindicativoanap                                                                                                   
-            \ifthenelse{\boolean{ABNTcapchap}}%                                                                                                                    
-              {\MakeUppercase{#1}}%                                                                                                                                
-              {#1}}                                                                                                                                                
-  \end{list}                                                                                                                                                       
-  \par\vspace{25pt}%                                                                                                                                               
-  }%                      
-}           
+            {\MakeUppercase{\anapchaptername}}
+            {\anapchaptername}
+          \thechapter{} \ABNTtravessao{} \ABNTaposindicativoanap
+            \ifthenelse{\boolean{ABNTcapchap}}%
+              {\MakeUppercase{#1}}%
+              {#1}}
+  \end{list}
+  \par\vspace{25pt}%
+  }%
+}
 
 % ====  thebibliography  ====
 % Almost equal to old thebibliography, but without capital page marks
@@ -391,7 +391,7 @@
   }% end of \end{thebibliography}
 
 
-% 
+%
 \renewcommand*\l@section[2]{\@dottedtocline{1}{1em}{1.6em}{#1}{#2} }
 \renewcommand*\l@subsection{\normalfont\@dottedtocline{2}{2.6em}{2.4em}}
 \renewcommand*\l@subsubsection{\@dottedtocline{3}{5em}{3em}}
@@ -501,7 +501,7 @@
 }
 
 % Ajusta a margem superior das páginas que contêm elementos
-% pre-textuais - abstract, resumo, agradecimentos, etc. (3cm) 
+% pre-textuais - abstract, resumo, agradecimentos, etc. (3cm)
 \def\@makeschapterhead#1{%
   {\centering\normalsize\bfseries%
    \ifthenelse{\boolean{ABNTcapchap}}%
@@ -583,7 +583,7 @@
 	\begin{minipage}{.4\textwidth}
 		\par
 		\textit{
-			\ABNTepigrafedata \\ 
+			\ABNTepigrafedata \\
 			\bfseries \ABNTautorepigrafedata
 		}
 	\end{minipage}

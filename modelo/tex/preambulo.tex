@@ -1,4 +1,4 @@
-\documentclass[pnumabnt,normaltoc,capchap,floatnumber=continuous]{abnt}		
+\documentclass[pnumabnt,normaltoc,capchap,floatnumber=continuous]{abnt}
 \usepackage[bibjustif,abnt-etal-cite=3,abnt-full-initials=yes]{abntcite}
 \usepackage{modelo/tex/uece}
 \usepackage[toc,page]{modelo/tex/appendix}
@@ -14,7 +14,7 @@
 \usepackage{eucal}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
-\usepackage[notintoc,portuguese]{nomencl}
+\usepackage[acronym,nomain,nonumberlist]{glossaries}
 \bibliographystyle{abnt-alf}
 
 \usepackage[T1]{fontenc}
@@ -23,8 +23,8 @@
 \hyphenation{com-pu-ta-ção}
 \hyphenation{com-bi-na-tó-ria}
 
-\renewcommand{\nomname}{Lista de Siglas}
-\renewcommand{\nomlabel}[1]{\hfil #1\hfil}
+%\renewcommand{\nomname}{Lista de Siglas}
+%\renewcommand{\nomlabel}[1]{\hfil #1\hfil}
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
@@ -56,3 +56,5 @@ em \UECEcursosimples.
 Dissertação submetida à Comissão Examinadora do \UECEprograma\ em \UECEcursosimples\ da
 \ABNTinstituicaodata\ como requisito parcial para obtenção do grau de Mestre.
 }
+
+\makeglossaries
