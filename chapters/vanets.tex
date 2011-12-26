@@ -3,14 +3,13 @@
 
 \section{O que são redes veiculares?}
 As VANETs (\textit{Vehicular Ad hoc NETworks}) são um tipo especial de rede
-móvel ad-hoc (\nomenclature{MANET}{\textit{Mobile Ad hoc NETwork}}, \textit{Mobile Ad
-hoc NETwork}) formada entre veículos (\nomenclature{V2V}{\textit{Vehicle-to-vechicle}} -
+móvel ad-hoc \gls{manet} formada entre veículos (\gls{v2v} -
 Figura \ref{fig:v2v}) e entre veículos e dispositivos de infraestrutura
-(\nomenclature{V2I}{\textit{Vehicle-to-infrastructure}} - Figura \ref{fig:v2i}). Os
+(\gls{v2i} - Figura \ref{fig:v2i}). Os
 dispositivos instalados nos veículos são conhecidos por \textit{unidades de
-bordo} (\nomenclature{OBU}{\textit{On-board unit}}, \textit{On-board unit}) e os que
+bordo} (\gls{obu}) e os que
 ficam ao longo da estrada são denominados por \textit{unidades de acostamento}
-(\nomenclature{RSU}{\textit{Road-side unit}}, \textit{Road-side unit}).
+(\gls{rsu}).
 
 \begin{figure}[htbp]
 \centering
@@ -43,9 +42,7 @@ regras de trânsito e seguirem um caminho definido.
 
 As redes veiculares têm por objetivo fornecer diversas aplicações aos seus
 usuários, tanto no que diz respeito à segurança quanto ao entretenimento. Tal
-sistema de aplicações é conhecido por Sistema de Transporte Inteligente
-(\nomenclature{ITS}{\textit{Intelligent Transportation System}}, \textit{Intelligent
-Transportation System}). Pode-se citar alguns exemplos de aplicações
+sistema de aplicações é conhecido por \gls{its}. Pode-se citar alguns exemplos de aplicações
 VANETs, como as aplicações de auxílio à mudança de faixa, aplicações de
 descoberta de melhor rota a um determinado destino, aplicações de divulgação de
 avisos de segurança, e acesso à internet, dentre outros \cite{li2007routing}.
@@ -53,9 +50,9 @@ avisos de segurança, e acesso à internet, dentre outros \cite{li2007routing}.
 Grandes são os desafios para a efetiva utilização das VANETs em um cenário
 real. Por conta de suas características únicas como alta velocidade de
 movimentação e densidade altamente dinâmica, grande parte dos protocolos
-utilizados nas MANETs não são adequados \cite{taha2007vanet}. Além destes 
-desafios, outros de grande importância referem-se ao baixo tempo de conexão 
-entre veículos e a alta possibilidade de perda de conexão durante a 
+utilizados nas MANETs não são adequados \cite{taha2007vanet}. Além destes
+desafios, outros de grande importância referem-se ao baixo tempo de conexão
+entre veículos e a alta possibilidade de perda de conexão durante a
 transmissão de dados.
 
 As redes veiculares são promissoras, visto que permitem oferecer diversos
@@ -67,11 +64,8 @@ modalidade de redes de comunicação. O governo americano aprovou em $2003$ um
 sistema de comunicação de curta distância, o DSRC (Dedicated
 Short-Range Communications) voltado principalmente para as redes veiculares;
 a União Européia, por meio de fabricantes de automóveis e peças, iniciou o
-consórcio \nomenclature{C2C-CC}{\textit{Car-to-Car Communication Consortium}}
-(\textit{Car-to-Car Communication Consortium}) e o IEEE está trabalhando na
-família de padrões IEEE 1609, voltados à tecnologia
-\nomenclature{WAVE}{\textit{Wireless Access in Vehicular Environments}}
-(\textit{Wireless Access in Vehicular Environments}).
+consórcio \gls{c2ccc} e o IEEE está trabalhando na
+família de padrões IEEE 1609, voltados à tecnologia \gls{wave}.
 
 Este capítulo vai discutir as redes veiculares, passando pela arquitetura,
 cenários onde as redes veiculares poderiam ser utilizadas, características,
@@ -81,9 +75,7 @@ aplicações em potencial e desafios técnicos.
 Em $1991$, o congresso americano aprovou a Lei da Eficiência do Transporte
 Intermodal de Superfície (\textit{Intermodal Surface Transportation
 Efficiency Act}), que resultou na criação da primeira geração dos sistemas de
-transportes inteligentes (\nomenclature{ITS}{\textit{Intelligent Transportation
-System}}, \textit{Intelligent Transportation
-System}). O objetivo principal do programa ITS era o aumento da segurança nos
+transportes inteligentes \gls{its}. O objetivo principal do programa ITS era o aumento da segurança nos
 transportes, que seria obtido com o uso de tecnologia na infraestrutura dos
 sistemas de transporte. A primeira geração do DSRC operava em $915$ MHz e tinha
 uma taxa de transmissão de $0,5$ Mb/s. Esta tecnologia foi utilizada
@@ -127,33 +119,33 @@ Mb/s. Em algumas circunstâncias, dois canais de serviço podem ser combinados
 para formar um canal único de 20 MHz, possibilitando atingir uma taxa de
 transferência de $54$ Mb/s. A única interferência na banda de $5,9$ GHz vem de
 radares militares e \textit{uplink} de satélites -- ambos esparsamente
-localizados --, ao passo que, a banda de 902--928 MHz é mais sucetível a 
-interferências, seja devido a telefones 900 MHz, dispositivos de identificação 
-automática instalados nas ferrovias (\textit{AEI readers}) e outros dispositivos 
-de observação meteorológica, como radares que detectam a velocidade e direção 
-dos ventos.  A tabela \ref{tab:dsrccomparison}, retirada de \cite{guo2006vehicular}, 
+localizados --, ao passo que, a banda de 902--928 MHz é mais sucetível a
+interferências, seja devido a telefones 900 MHz, dispositivos de identificação
+automática instalados nas ferrovias (\textit{AEI readers}) e outros dispositivos
+de observação meteorológica, como radares que detectam a velocidade e direção
+dos ventos.  A tabela \ref{tab:dsrccomparison}, retirada de \cite{guo2006vehicular},
 mostra as diferenças entre as tecnologias DSRC de primeira e segunda geração.
 
 \begin{table}[htbp]
-		\centering
-		\begin{tabular}{l l l}
-		\toprule
-		& 902--928 MHz & 5850--5925 MHz\\
-		\midrule
-		Espectro & $12$ MHz & $75$ MHz\\
-		Taxa de dados  & $0,5$ Mb/s & $6$ Mb/s -- $27$ Mb/s \\
-		Potencial de interferência & alto & baixo \\
-		Cobertura & uma zona de comunicação & zonas de comunicação sobrepostas\\
-		Alcance máximo & $300$ pés ($91,4$ metros) & $1000$ metros\\
-		Separação mínima & 1500 pés ($457,2$ metros) & 50 pés ($15,2$ metros)\\
-		Canais & 1 a 2 canais & 7 canais\\
-		\bottomrule
-		\end{tabular}
+                \centering
+                \begin{tabular}{l l l}
+                \toprule
+                & 902--928 MHz & 5850--5925 MHz\\
+                \midrule
+                Espectro & $12$ MHz & $75$ MHz\\
+                Taxa de dados  & $0,5$ Mb/s & $6$ Mb/s -- $27$ Mb/s \\
+                Potencial de interferência & alto & baixo \\
+                Cobertura & uma zona de comunicação & zonas de comunicação sobrepostas\\
+                Alcance máximo & $300$ pés ($91,4$ metros) & $1000$ metros\\
+                Separação mínima & 1500 pés ($457,2$ metros) & 50 pés ($15,2$ metros)\\
+                Canais & 1 a 2 canais & 7 canais\\
+                \bottomrule
+                \end{tabular}
 \caption{Comparação entre as tecnologias DSRC}
  \label{tab:dsrccomparison}
 \end{table}
 
-Como dito anteriormente, o espectro DSRC é dividido em sete canais 
+Como dito anteriormente, o espectro DSRC é dividido em sete canais
 de $10$ MHz (Figura \ref{fig:dsrc}) e cada canal é utilizado por um
 tipo de aplicação.
 
@@ -174,11 +166,11 @@ aplicações de segurança ou por outros tipos de aplicação.
 \section{Características das redes veiculares}
 
 As redes veiculares apresentam características únicas que as tornam
-radicalmente diferentes \cite{blum2004challenges} de outras MANETs, e  
-tais características influenciam diretamente o desenvolvimento de 
-seus protocolos e serviços. Por conta disto, muitos dos protocolos 
-desenvolvidos para MANETs não funcionam adequadamente quando utilizados 
-em VANETs. 
+radicalmente diferentes \cite{blum2004challenges} de outras MANETs, e
+tais características influenciam diretamente o desenvolvimento de
+seus protocolos e serviços. Por conta disto, muitos dos protocolos
+desenvolvidos para MANETs não funcionam adequadamente quando utilizados
+em VANETs.
 
 Basicamente, uma VANET possui as seguintes características:
 \begin{enumerate}
@@ -188,18 +180,18 @@ Basicamente, uma VANET possui as seguintes características:
   \item[$\bullet$] mobilidade previsível.
 \end{enumerate}
 
-A combinação destas características resulta em uma topologia altamente 
-mutável que é frequentemente fragmentada e possui um pequeno diâmetro 
-efetivo da rede, também possui limitada redundância e diversos problemas 
+A combinação destas características resulta em uma topologia altamente
+mutável que é frequentemente fragmentada e possui um pequeno diâmetro
+efetivo da rede, também possui limitada redundância e diversos problemas
 de segurança \cite{raya2006securing, dotzer2006privacy, golle2004detecting}.
 
-Quanto maior a mobilidade dos veículos maior é a mudança da topologia, 
+Quanto maior a mobilidade dos veículos maior é a mudança da topologia,
 e essa mudança frequente resulta em curtos períodos de conectividade
-entre os nós, que podem mover-se a velocidades superiores a 200 km/h, 
-por exemplo. Uma possível solução para aumentar o tempo de conectividade 
-entre veículos seria aumentar a potência de transmissão, mas isso também 
-diminui o \textit{throughput} da rede \cite{khorashadi2007impact,chen2007impact}. 
-Por outro lado, como a trajetória dos veículos é restrigida pelo traçado 
+entre os nós, que podem mover-se a velocidades superiores a 200 km/h,
+por exemplo. Uma possível solução para aumentar o tempo de conectividade
+entre veículos seria aumentar a potência de transmissão, mas isso também
+diminui o \textit{throughput} da rede \cite{khorashadi2007impact,chen2007impact}.
+Por outro lado, como a trajetória dos veículos é restrigida pelo traçado
 da estrada, sua posição futura pode ser considerada previsível, e isto pode
 ser utilizado como métrica de um protocolo de roteamento fazendo com que
 sejam escolhidas rotas que possuam maior tempo de vida previsto.
@@ -208,11 +200,11 @@ A potência de transmissão dos OBUs geralmente não é uma restrição signific
 como ocorre em algumas redes de sensores sem fio. Um veículo consegue fornecer
 alimentação contínua para os dispositivos de comunicação.
 
-Outra característica interessante é a capacidade das redes veiculares 
-serem formadas por um número potencialmente grande de participantes -- 
-podendo se estender por toda uma estrada --, ao contrário da maioria 
-das redes \textit{ad hoc} estudadas na literatura, que normalmente assumem um 
-tamanho limitado da rede. 
+Outra característica interessante é a capacidade das redes veiculares
+serem formadas por um número potencialmente grande de participantes --
+podendo se estender por toda uma estrada --, ao contrário da maioria
+das redes \textit{ad hoc} estudadas na literatura, que normalmente assumem um
+tamanho limitado da rede.
 
 \section{Aplicações potenciais}
 As aplicações imaginadas para as redes veiculares variam desde aplicações que
@@ -223,11 +215,11 @@ diferentes.
 As ideias primárias das redes veiculares incluem aplicações de segurança para
 os motoristas e passageiros, provendo segurança e oferecendo ferramentas para a
 decisão do melhor caminho em uma estrada. Tais aplicações, portanto, pretendem
-minimizar os acidentes e melhorar as condições de tráfego, oferecendo informações 
+minimizar os acidentes e melhorar as condições de tráfego, oferecendo informações
 úteis aos motoristas e passageiros, como avisos de colisões, notificações
 sobre as condições da estrada e visões \textit{in-place} do tráfego
-\cite{moustafa2009vehicular}. Para que as aplicações de segurança possam ser 
-utilizadas, é necessário que os veículos compartilhem informações precisas de 
+\cite{moustafa2009vehicular}. Para que as aplicações de segurança possam ser
+utilizadas, é necessário que os veículos compartilhem informações precisas de
 posicionamento. As aplicações potenciais desta categoria são as seguintes:
 
 \begin{enumerate}
@@ -245,10 +237,9 @@ que oferecem -- aos motoristas e passageiros --, serviços tais como a
 conectividade com a \textit{Internet}, explorando uma infraestrutura disponível
 sob demanda, sistemas de pedágio automático, e uma variedade de serviços
 multimídia. Além disso, outras redes de comunicação, tais como 2-3G,
-\nomenclature{WLANs}{\textit{Wireless Local Area Networks}}
-\nomenclature{IEEE}{\textit{Institute of Electric and Electronic Engineers}}
-802.11a/b/g/p e \nomenclature{WiMAX}{\textit{Worldwide Interoperability for Microwave
-Access}}, podem ser exploradas para fornecer as aplicações de conforto e
+\gls{wlan}
+\gls{ieee}
+802.11a/b/g/p e \gls{wimax}, podem ser exploradas para fornecer as aplicações de conforto e
 entretenimento. As aplicações potencias desta categoria são as seguintes:
 
 \begin{enumerate}
@@ -258,7 +249,7 @@ entretenimento. As aplicações potencias desta categoria são as seguintes:
  \item[$\bullet$] Aplicações de diagnóstico -- permitem que uma estação de
  serviço avalie o estado de um veículo sem fazer uma inspeção física.
 \end{enumerate}
- 
+
 \section{Principais desafios}
 As características inerentes às redes veiculares criam alguns desafios para a
 comunicação veicular, que podem dificultar uma futura utilização dessas redes no
@@ -283,5 +274,4 @@ localizados em regiões próximas.
 Os cenários VANETs são diferentes dos cenários MANETs clássicos. No cenário
 urbano, dependendo da situação ou do horário, a densidade da rede pode variar
 bastante, passando frequentemente de baixa para alta densidade.
-
 
