@@ -2,6 +2,15 @@ modelo-monografia.pdf
 *.kilepr
 *.pdf
 *.sh
+*.aux
+*.bbl
+*.blg
+*.ilg
+*.lof
+*.lot
+*.nlo
+*.nls
+*.toc
 *.log
 *.backup
 *~
