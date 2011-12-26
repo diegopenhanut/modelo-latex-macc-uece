@@ -1,6 +1,6 @@
 # Variables
 
-filename=modelo-monografia
+filename=modelo-dissertacao
 ERROR_MSG="a problem occurred. please check 'output.log' for more info"
 
 all: $(filename).tex references.bib
