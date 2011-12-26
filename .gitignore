@@ -3,9 +3,13 @@ modelo-monografia.pdf
 *.pdf
 *.sh
 *.aux
+*.acn
+*.acr
+*.alg
 *.bbl
 *.blg
 *.ilg
+*.ist
 *.lof
 *.lot
 *.nlo
