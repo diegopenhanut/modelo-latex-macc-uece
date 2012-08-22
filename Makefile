@@ -15,6 +15,6 @@ all: $(filename).tex references.bib
 
 clean:
 	@echo -n "  CLEAN\t"
-	@rm -f *.out *.aux *.alg *.acr *.dvi *.gls *.log *.bbl *.blg  *.lof *.lot *.toc *.loa *.lsg *.nlo *.nls *.ilg *.ind *.ist *.glg *.glo *.xdy *.acn *~ output.log
+	@rm -f *.out *.aux *.alg *.acr *.dvi *.gls *.log *.bbl *.blg *.ntn *.not *.lof *.lot *.toc *.loa *.lsg *.nlo *.nls *.ilg *.ind *.ist *.glg *.glo *.xdy *.acn *~ output.log
 	@rm -f $(filename).pdf 
 	@echo "OK"

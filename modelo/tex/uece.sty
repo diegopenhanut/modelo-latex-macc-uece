@@ -45,6 +45,9 @@
 \newcommand{\ABNTautorrdata}{}
 \newcommand{\autorr}[1]{\renewcommand{\ABNTautorrdata}{#1}}
 
+\newcommand{\ABNTcoorientadordoisdata}{}
+\newcommand{\coorientadordois}[1]{\renewcommand{\ABNTcoorientadordoisdata}{#1}}
+
 \newcommand{\ABNTepigrafedata}{}
 \newcommand{\epigrafe}[1]{\renewcommand{\ABNTepigrafedata}{#1}}
 
@@ -115,6 +118,7 @@
     \pagebreak
 }
 
+% regras da capa da dissertação
 \renewcommand{\capa}{
     \begin{center}
 
@@ -130,7 +134,7 @@
 
         \vspace{4cm}
 
-        \Large\ABNTchapterfont\MakeUppercase{\ABNTtitulodata}
+        \ABNTchapterfont\MakeUppercase{\ABNTtitulodata}
 
         \vfill
         \normalsize\MakeUppercase\ABNTlocaldata
@@ -146,9 +150,9 @@
 \renewcommand{\folhaderosto}{
 
     \begin{center}
-        \normalsize\ABNTchapterfont\MakeUppercase\ABNTautordata\par
+        \normalsize\MakeUppercase\ABNTautordata\par
         \vspace{4.0cm}\par
-        \normalsize\ABNTchapterfont\MakeUppercase\ABNTtitulodata
+        \normalsize\MakeUppercase\ABNTtitulodata
     \end{center}
 
     \vspace{4cm}
@@ -173,8 +177,8 @@
     \vfill
 
     \begin{center}
-        \normalsize\textbf{\MakeUppercase\ABNTlocaldata}\par
-        \normalsize\textbf{\ABNTdatadata}
+        \normalsize\MakeUppercase\ABNTlocaldata\par
+        \normalsize\ABNTdatadata
     \end{center}
 
     \pagebreak
@@ -219,16 +223,21 @@
 
 \gdef\uececipdata{
     \hspace{0.5cm}
-    \small Orientador: Prof. Dr. \ABNTorientadordata
+    \small Disserta\c{c}\~ao - \ABNTinstituicaodata, \ABNTcentrodata, \UECEprograma, \ABNTcidadedata, \ABNTdatadata. 
 
     \hspace{0.5cm}
-    \small Dissertação (\ABNTcursodata) - \ABNTinstituicaodata, \ABNTcentrodata.
+    Orienta\c{c}\~ao: \ABNTorientadordata.
+
+    %\hspace{0.5cm}
+    %Co-orienta\c{c}\~ao: \ABNTcoorientadordata.
+    
+    %\hspace{0.5cm}
+    %Co-orienta\c{c}\~ao: \ABNTcoorientadordoisdata.
 
     \hspace{0.5cm}
     $1$. \ABNTpcumdata\ $2$. \ABNTpcdoisdata\ $3$. \ABNTpctresdata\ $4$.
-    \ABNTpcquatrodata\ $5$. \ABNTpccincodata\ I.
-    \ABNTinstituicaodata, \ABNTcentrodata.
-
+    \ABNTpcquatrodata\ $5$. \ABNTpccincodata.\ I.
+    T\'itulo.
 }
 
 
@@ -257,14 +266,19 @@
 
 \renewcommand{\ABNTsectionfontsize}{\normalsize}
 \renewcommand{\ABNTsectionfont}{\bfseries}
+
 \renewcommand{\ABNTsubsectionfontsize}{\normalsize}
-\renewcommand{\ABNTsubsectionfont}{\bfseries}
+\renewcommand{\ABNTsubsectionfont}{\itshape\bfseries}
+
 \renewcommand{\ABNTsubsubsectionfontsize}{\normalsize}
-\renewcommand{\ABNTsubsubsectionfont}{\bfseries}
+\renewcommand{\ABNTsubsubsectionfont}{\itshape}
+
 \renewcommand{\ABNTparagraphfontsize}{\normalsize}
-\renewcommand{\ABNTparagraphfont}{\bfseries}
+%\renewcommand{\ABNTparagraphfont}{\bfseries}
+
 \renewcommand{\ABNTsubparagraphfontsize}{\normalsize}
 \renewcommand{\ABNTsubparagraphfont}{\normalfont\bfseries}
+
 \renewcommand{\ABNTanapsize}{\normalsize}
 
 
@@ -391,10 +405,10 @@
   }% end of \end{thebibliography}
 
 
-%
-\renewcommand*\l@section[2]{\@dottedtocline{1}{0em}{1.6em}{\uppercase{#1}}{#2} }
-\renewcommand*\l@subsection{\bfseries\@dottedtocline{2}{0em}{2.4em}}
-\renewcommand*\l@subsubsection{\@dottedtocline{3}{0em}{3em}}
+% estilo das seções
+\renewcommand*\l@section[2]{\@dottedtocline{1}{0em}{1.6em}{\textbf{#1}}{#2} }
+\renewcommand*\l@subsection[2]{\@dottedtocline{2}{0em}{2.4em}{\textit{\textbf{#1}}}{#2} }
+\renewcommand*\l@subsubsection[2]{\@dottedtocline{3}{0em}{3em}{\textit{#1}}{#2}}
 
 
 % Cria um comando auxiliar para montagem da lista de figuras
@@ -513,7 +527,16 @@
 }
 
 %Altera o tamanho do parágrafo
-\setlength{\parindent}{1.5cm}
+\setlength{\parindent}{2cm}
+
+% modificado quote para regras da uece
+\renewenvironment{quote}{
+  \list{}{\footnotesize
+    \leftmargin4cm
+  }%
+  \item\relax
+}
+{\endlist}
 
 \newcommand{\comentariosimplificado}[1]{\newcommand{\ABNTcomentariosimplificadodata}{#1}}
 
@@ -544,7 +567,7 @@
     \vspace{1cm}
 
     \begin{center}
-    \textbf{BANCA EXAMINADORA}
+    BANCA EXAMINADORA
     \end{center}
 
     \setlength{\ABNTsignthickness}{0.4pt}

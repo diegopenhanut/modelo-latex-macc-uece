@@ -14,6 +14,7 @@ modelo-monografia.pdf
 *.lot
 *.nlo
 *.nls
+*.ntn
 *.toc
 *.log
 *.backup
